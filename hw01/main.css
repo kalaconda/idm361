@@ -45,7 +45,7 @@ body {
 	  background-color: #FA915A;
 	}
 	#face {
-	  margin: 90px 35px 10px;
+	  margin: 30px 35px 10px;
 	  background: url(images/juggleicon.svg) no-repeat;
 	}
 	#output:after {
