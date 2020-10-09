@@ -45,8 +45,11 @@ body {
 	  background-color: #FA915A;
 	}
 	#face {
-	  margin: 30px 35px 10px;
+	  height: 300px;
+	  weight: 300px;
+	  margin: 30px auto 10px;
 	  background: url(images/juggleicon.svg) no-repeat;
+	  background-repeat: repeat-y;
 	}
 	#output:after {
 	  content:'JUGGLE';
@@ -67,9 +70,16 @@ body {
 	body {
 	  background-color: #f1f1f1;
 	}
+	#content {
+		width: 500px;
+		margin: 10px auto;
+		overflow-x: hidden;
+	}
 	#face {
-	  margin: 30px auto 10px;
-	  height: 150px;
+	  display: block;
+	  margin: 20px auto;
+	  height: 200px;
+	  width: 400px;
 	  background: url(images/juggleicon2.svg) no-repeat;
 	}
 	#output:after {
