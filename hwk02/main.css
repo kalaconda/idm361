@@ -1,0 +1,135 @@
+body {
+	background-color:#FA915A;
+}
+
+#content {
+	width: 320px;
+	margin: 10px auto;
+	overflow-x: hidden;
+}
+
+#face {
+	width: 300px;
+	height: 300px;
+	margin: 30px auto 10px;
+	background: url(images/juggleicon.png);
+}
+
+#output {
+	text-align: center;
+}
+
+#desc {
+	text-align: center;
+}
+
+#button {
+	background-color: #f1f1f1;
+	border-radius: 5px;
+	cursor: pointer;
+	display: block;
+	text-align: center;
+	font-family: 'brandontext-bold';
+	font-size: 20px;
+	margin: 50px auto 10px;
+	padding: 10px 10px 10px 10px;
+	text-decoration: none;
+	color: #FA915A;
+	outline: none;
+	border: none;
+	width: 200px;
+}
+
+@media only screen and (orientation:portrait) {
+	body {
+	  background-color: #FA915A;
+	}
+	#face {
+	  height: 300px;
+	  weight: 300px;
+	  margin: 30px auto 10px;
+	  background: url(images/juggleicon.svg) no-repeat;
+	  background-repeat: repeat-y;
+	}
+	#output:after {
+	  content:'JUGGLE';
+	  font-family: 'whattheteacherwants';
+	  font-size: 40px;
+	  letter-spacing: 7px;
+	  color: #f1f1f1;
+	}
+	#desc:after {
+	  content:'Juggle your shopping list items with this interactive shopping list app.';
+	  font-family: 'brandontext-regular';
+	  font-size: 18px;
+	  color: #f1f1f1;
+	}
+}
+
+@media only screen and (orientation:landscape) {
+	body {
+	  background-color: #f1f1f1;
+	}
+	#content {
+		width: 500px;
+		margin: 10px auto;
+		overflow-x: hidden;
+	}
+	#face {
+	  display: block;
+	  margin: 20px auto;
+	  height: 200px;
+	  width: 400px;
+	  background: url(images/juggleicon2.svg) no-repeat;
+	}
+	#output:after {
+		content:'"OOPS"';
+		font-family: 'whattheteacherwants';
+		font-size: 40px;
+		color: #FA915A;
+	}
+	#desc:after {
+		content:'Turn your phone for the best experience.';
+		font-family: 'brandontext-bold';
+		font-size: 25px;
+		color: #FA915A;
+	}
+	#button {
+		display: none;
+	}
+}
+
+/* title font */
+@font-face {
+    font-family: 'whattheteacherwants';
+    src: url('fonts/whattheteacherwants.woff2') format('woff2'),
+         url('fonts/whattheteacherwants.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+/* secondary font */
+@font-face {
+    font-family: 'brandontext-regular';
+    src: url('fonts/brandontext-regular.woff2') format('woff2'),
+         url('fonts/brandontext-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: 'brandontext-bold';
+    src: url('fonts/brandontext-bold.woff2') format('woff2'),
+         url('fonts/brandontext-bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+
+
+
+
+
+
+
