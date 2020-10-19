@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JUGGLE</title>
+        <!-- META -->
+        <meta charset="utf-8">
+        <!-- this webpage will have a controllable viewpoint/ stop the user from zooming in and out -->
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width, maximum-scale=1.0">
+        <!-- let browser know that page is compatable with ios/safari -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <!-- make the status bar black when app is added to home screen -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <!-- make the app title different from the web page title -->
+        <meta name="apple-mobile-web-app-title" content="JUGGLE"> 
+        <!-- disable auto phone number detection -->
+        <meta name="format-detection" content="telephone=no">
+    
+        <!-- CSS -->
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="styles.css">
+    
+        <!-- IPHONES -->
+        <link rel="apple-touch-icon" sizes="180x180" href="images/icon-180.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/icon-114.png">
+        <link rel="apple-touch-icon" sizes="57x57" href="images/icon-57.png">
+    
+        <!-- OR use one generic renamed 180x180 png icon to rule them all -->
+        <link rel="apple-touch-icon" href="images/icon-180.png">
+    </head>
+    <body>
+       
+        <header class="skew">
+            <h1>JUGGLE</h1> 
+        </header>
+        <div class="container">
+            <input type="text" id="txt">
+                <div class="buttons">
+                    <button class="btns" id="add" onclick="addLI()">Add</button>
+                    <button class="btns" id="edit" onclick="editLI()">Edit</button>
+                    <button class="btns" id="delete" onclick="deleteLI()">Delete</button>
+                </div>
+        </div>
+        
+        <ul id="list">
+            <li></li>
+        </ul>
+
+        <script>
+            //checking off a todo
+            $("ul").on("click", "li", function() {
+            $(this).toggleClass("completed");
+            });
+        </script>
+
+        <script>
+            
+            var inputText = document.getElementById("txt"),
+                 items = document.querySelectorAll("#list li"),
+                 tab = [], index;
+         
+             // get the selected li index using array
+             // populate array with li values
+             
+             for(var i = 0; i < items.length; i++){
+                 tab.push(items[i].innerHTML);
+             }
+             
+             // get li index onclick
+             for(var i = 0; i < items.length; i++){
+                 
+                 items[i].onclick = function(){
+                     index = tab.indexOf(this.innerHTML);
+                     console.log(this.innerHTML + " INDEX = " + index);
+                     // set the selected li value into input text
+                     inputText.value = this.innerHTML;
+                 };
+                 
+             }
+            
+            function refreshArray()
+            {
+                // clear array
+                tab.length = 0;
+                items = document.querySelectorAll("#list li");
+                // fill array
+                for(var i = 0; i < items.length; i++){
+                 tab.push(items[i].innerHTML);
+               }
+            }
+            function addLI(){
+                
+                var listNode = document.getElementById("list"),
+                    textNode = document.createTextNode(inputText.value),
+                    liNode = document.createElement("LI");
+                    
+                    liNode.appendChild(textNode);
+                    listNode.appendChild(liNode);
+                    
+                    refreshArray();
+                    
+                    // add event to the new LI
+                    
+                    liNode.onclick = function(){
+                     index = tab.indexOf(liNode.innerHTML);
+                     console.log(liNode.innerHTML + " INDEX = " + index);
+                     // set the selected li value into input text
+                     inputText.value = liNode.innerHTML;
+                 };
+                    
+             }
+             
+             function editLI(){
+                 // edit the selected li using input text
+                 items[index].innerHTML = inputText.value;
+                 refreshArray();
+              }
+              
+              function deleteLI(){
+                  
+                      refreshArray();
+                      if(items.length > 0){
+                          items[index].parentNode.removeChild(items[index]);
+                          inputText.value = "";
+                      }
+              }
+            
+        </script>
+        
+    </body>
+</html>
