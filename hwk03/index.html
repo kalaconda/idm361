@@ -40,7 +40,6 @@
             <input type="text" id="txt">
                 <div class="buttons">
                     <button class="btns" id="add" onclick="addLI()">Add</button>
-                    <button class="btns" id="edit" onclick="editLI()">Edit</button>
                     <button class="btns" id="delete" onclick="deleteLI()">Delete</button>
                 </div>
         </div>
@@ -62,6 +61,7 @@
         <script src="add2home.js"></script>
         <script src="main.js"></script>
 
+        <!-- j query for checking off todo -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
         <script>
@@ -106,6 +106,7 @@
                  tab.push(items[i].innerHTML);
                }
             }
+
             function addLI(){
                 
                 var listNode = document.getElementById("list"),
@@ -127,13 +128,15 @@
                  };
                     
              }
-             
-             function editLI(){
-                 // edit the selected li using input text
-                 items[index].innerHTML = inputText.value;
-                 refreshArray();
-              }
               
+            // edit list item
+            $('#list').click('li', function() {
+
+            $('#list li').attr('contenteditable', 'true');
+
+            });
+
+            // delete list item
               function deleteLI(){
                   
                       refreshArray();
@@ -142,6 +145,7 @@
                           inputText.value = "";
                       }
               }
+              
             
         </script>
     </body>

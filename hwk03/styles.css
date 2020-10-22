@@ -113,17 +113,22 @@ ul#list {
 /* list items */
 li {
     font-family: 'brandon-regular';
+    font-size: 18px;
     font-weight: bold;
     cursor: pointer;
     padding: 10px;
     z-index: 1;
 }
 
+/* no focus outline on li item */
+#list li:focus {
+    outline: none;
+}
+
 /* add, edit, and delete btns */
 .buttons {
     display: flex;
     flex-direction: row;
-    padding-left: 10px;
 }
 
 .btns {
@@ -142,7 +147,8 @@ li {
 
 /* cross off completed item on the list */
 .completed {
-    color: #FA915A;
+    color: #ffffff;
+    background-image: linear-gradient(315deg, #e9ce48 0%, #FA915A 74%);
     text-decoration: line-through;
   }
 
