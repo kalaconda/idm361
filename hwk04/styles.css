@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    background-color: #f1f1f1;
+    width: auto;
+    height: auto;
+  }
+
+/* header */
+header {
+    background-color: #FA915A;
+    display: flex;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+/* title */
+h1 {
+    text-align: center;
+    font-family: 'whattheteacherwants';
+    letter-spacing: 7px;
+    color: white;
+    padding-top: .2em;
+    margin: 0;
+  }
+
+/* app icon */
+img#icon {
+    width: 50px;
+    height: 50px;
+    padding-top: .5em;
+}
+
+header img {
+    position: relative;
+    text-align: center;
+    font-family: 'whattheteacherwants';
+    color: white;
+    margin: 0;
+}
+
+/* container for input + btns */
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column-reverse;
+        width: 90%;
+        margin: auto;
+        margin-top: 40px;
+    }
+    #txt {
+        padding: 10px 10px 10px 10px;
+        margin: auto;
+    }
+    .buttons {
+        justify-content: center;
+    }
+    .btns {
+        margin-bottom: 10px;
+    }
+}
+
+/* move txt area inside input box */
+input[type=text] {
+    padding-left: 10px;
+}
+
+input {
+    width: 20em;
+}
+
+/* txt inside input */
+input#txt {
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    -webkit-box-shadow: 0 3px 3px 0px rgba(0,0,0,0.226); 
+    -moz-box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.226);
+    font-family: 'brandon-regular';
+    outline: none;
+}
+
+/* remaining space under loose leaf img */
+.bg {
+    background-color: white;
+    width: 100%;
+    bottom: 0;
+    top: 270px;
+    position: absolute;
+}
+
+/* results of adding to list */
+ul#list {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    list-style: none;
+    overflow: auto;
+    padding-top: 20px;
+}
+
+/* list items */
+li {
+    font-family: 'brandon-regular';
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+}
+
+/* no focus outline on li item */
+#list li:focus {
+    outline: none;
+}
+
+/* add, edit, and delete btns */
+.buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.btns {
+    background-color: #FA915A;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'brandon-bold';
+    outline: none;
+    padding: 5px 10px 5px 10px;
+    margin-left: 10px;
+    text-shadow: 2px 2px #a35e39;
+}
+
+/* cross off completed item on the list */
+.completed {
+    color: #FA915A;
+    text-decoration: line-through;
+  }
+
+/* font */
+@font-face {
+    font-family: 'brandon-bold';
+    src: url('fonts/brandontext-bold.woff2') format('woff2'),
+         url('fonts/brandontext-bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+@font-face {
+    font-family: 'brandon-regular';
+    src: url('fonts/brandontext-regular.woff2') format('woff2'),
+         url('fonts/brandontext-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: 'brandon-light';
+    src: url('fonts/brandontext-light.woff2') format('woff2'),
+         url('fonts/brandontext-light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+/* title font */
+@font-face {
+    font-family: 'whattheteacherwants';
+    src: url('fonts/whattheteacherwants.woff2') format('woff2'),
+         url('fonts/whattheteacherwants.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
