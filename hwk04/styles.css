@@ -46,6 +46,81 @@ header img {
     margin: 0;
 }
 
+/* The Modal (background) */
+
+/* modal buton */
+img#questionmark {
+    background-color: #FA915A;
+    position: absolute;
+    z-index: 1;
+    width: 45px;
+    height: 45px;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: help;
+}
+
+.modal { 
+    display: block;/* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+  
+/* Modal Content */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 0 auto;
+    padding: 10px;
+    font-family: 'brandon-bold';
+    width: 80%;
+    height: 500px;
+    bottom: 0;
+    position: relative;
+}
+
+p {
+    color: #FA915A;
+    font-size: 20px;
+    padding: 20px;
+}
+  
+/* The Close Button */
+.close {
+    color: #FA915A;
+    font-size: 45px;
+    font-weight: bold;
+    position:absolute;
+    top: -10px;
+    right: 10px;
+}
+  
+.close:hover,
+.close:focus {
+    color: #a35e39;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+img#add {
+    width: 45px;
+    height: 30px;
+}
+
+img#delete {
+    width: 60px;
+    height: 30px;
+}
+  
 /* container for input + btns */
 .container {
     display: flex;
@@ -84,6 +159,7 @@ input {
 
 /* txt inside input */
 input#txt {
+    display:block;
     border: none;
     border-radius: 3px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -115,11 +191,11 @@ ul#list {
 /* list items */
 li {
     font-family: 'brandon-regular';
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     cursor: pointer;
     padding: 10px;
-    z-index: 1;
+    z-index: 0;
 }
 
 /* no focus outline on li item */
@@ -152,6 +228,14 @@ li {
     color: #FA915A;
     text-decoration: line-through;
   }
+
+/* highlight editable text area */
+[contenteditable="true"]:active,
+[contenteditable="true"]:focus {
+    background-color: rgb(252, 244, 244);
+background-image: linear-gradient(315deg, #f7d8b5 0%, rgb(252, 244, 244)74%);
+
+}
 
 /* font */
 @font-face {
