@@ -63,7 +63,7 @@ img#questionmark {
 }
 
 .modal { 
-    display: block;/* Hidden by default */
+    display: none;/* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     padding-top: 100px; /* Location of the box */
@@ -145,7 +145,7 @@ img#delete {
     display: none;
     cursor: pointer;
     color: #FA915A;
-    font-size: 30px;
+    font-size: 20px;
   }
 
 .close:hover,
@@ -226,6 +226,7 @@ li {
 .list li:focus {
     outline: none;
 }
+
 
 #btns {
     background-color: #FA915A;
