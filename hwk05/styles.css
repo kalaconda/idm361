@@ -146,6 +146,9 @@ img#delete {
     cursor: pointer;
     color: #FA915A;
     font-size: 20px;
+    position: absolute;
+    padding: 0; 
+    margin: 0;
   }
 
 .close:hover,
@@ -186,7 +189,7 @@ input#txt {
 
 /* remaining space under loose leaf img */
 .bg {
-    background-color: white;
+    background-color: rgba(231, 231, 231, 0.527);
     width: 100%;
     bottom: 0;
     top: 220px;
@@ -209,14 +212,27 @@ ul.list {
     50% { margin-left: 0%;   }
   }
 
+/* list container */
+ul {
+    width: 90%;
+    margin: 0 auto;
+}
+
 /* list items */
 li {
     font-family: 'brandon-regular';
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px 0px #cfd9db;
+    -webkit-box-shadow: 0px 2px 5px 0px #cfd9db;
+    -moz-box-shadow: 0px 2px 5px 0px #cfd9db;
     font-size: 20px;
-    font-weight: bold;
-    cursor: pointer;
-    padding: 10px;
-    z-index: 0;
+    height: 60px;
+    line-height: 61px;
+    margin: 8px 0 0;
+    overflow: hidden;
+    padding: 0 12px 0 14px;
+    position: relative;
     /* slide in animation */
     animation-duration: .5s;
     animation-name: slidein;
@@ -251,7 +267,7 @@ li {
 /* highlight editable text area */
 [contenteditable="true"]:active,
 [contenteditable="true"]:focus {
-    background-color: rgb(252, 244, 244);
+background-color: rgb(252, 244, 244);
 background-image: linear-gradient(315deg, #f7d8b5 0%, rgb(252, 244, 244)74%);
 
 }
