@@ -187,7 +187,7 @@ input#txt {
     outline: none;
 }
 
-/* remaining space under loose leaf img */
+/* remaining space under input box */
 .bg {
     background-color: rgba(231, 231, 231, 0.527);
     width: 100%;
