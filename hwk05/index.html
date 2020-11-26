@@ -64,7 +64,6 @@
                     to add your item to the list below.
                 </p>
                 <p>You can cross out or remove a list item from the list by tapping on it.</p>
-                <p>You can also edit a list item by double tapping on it.</p>
             </div>
         </div>
 
@@ -86,7 +85,6 @@
         
         <script src="add2home.js"></script>
         <script src="main.js"></script>
-        <script src="local.js"></script>
 
          <!-- j query for checking off todo -->
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -98,6 +96,7 @@
                     $(this).toggleClass("completed");
                 });
 
+
                 //local storage
                 $(document).ready(function() {
                     var $button = $('.add-item');
@@ -108,6 +107,8 @@
                         // select where the storage will be
                         $list.html(localStorage.getItem('user-input'));
                     }
+
+
                     // add item 
                     $button.on('click', function() {
 
@@ -117,13 +118,6 @@
                         localStorage.setItem('user-input', $list.html());
 
                         $input.val('');
-
-                    });
-
-                    // edit list item
-                    $('.list').click('li', function() {
-
-                        $('.list li').attr('contenteditable', 'true');
 
                     });
 
