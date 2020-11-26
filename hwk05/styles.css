@@ -5,7 +5,7 @@
 
 html {
     box-sizing: border-box;
-    background-color: rgba(231, 231, 231, 0.527);
+    background-color: #f1f1f1;
     width: auto;
     height: auto;
   }
@@ -189,7 +189,7 @@ input#txt {
 
 /* remaining space under input box */
 .bg {
-    background-color: #f1f1f1;
+    background-color: rgba(231, 231, 231, 0.527);
     width: 100%;
     bottom: 0;
     top: 220px;
@@ -260,11 +260,17 @@ li {
 
 /* cross off completed item on the list */
 .completed {
-    transition: all .4s ease;
     color: #FA915A;
     text-decoration: line-through;
   }
 
+/* highlight editable text area */
+[contenteditable="true"]:active,
+[contenteditable="true"]:focus {
+background-color: rgb(252, 244, 244);
+background-image: linear-gradient(315deg, #f7d8b5 0%, rgb(252, 244, 244)74%);
+
+}
 
 /* font */
 @font-face {
