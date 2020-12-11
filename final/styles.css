@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    background-color: rgba(231, 231, 231, 0.527);
+    width: auto;
+    height: auto;
+  }
+
+/* header */
+header {
+    background-color: #FA915A;
+    display: flex;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+  
+/* title */
+    span {
+        text-align: center;
+        font-family: 'whattheteacherwants';
+        font-size: 30px;
+        letter-spacing: 7px;
+        color: white;
+        padding-top: .2em;
+        margin: 0;
+    }
+
+/* app icon */
+img#icon {
+    width: 50px;
+    height: 50px;
+    padding-top: .6em;
+}
+
+header img {
+    position: relative;
+    text-align: center;
+    font-family: 'whattheteacherwants';
+    color: white;
+    margin: 0;
+}
+
+/* The Modal (background) */
+
+/* modal buton */
+img#questionmark {
+    background-color: #FA915A;
+    position: absolute;
+    z-index: 1;
+    width: 45px;
+    height: 45px;
+    top: 0;
+    right: 0;
+    padding: 20px;
+    cursor: help;
+}
+
+.modal { 
+    display: none;/* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+
+.modal-content {
+    background-color: #fefefe;
+    border-radius: 15px;
+    margin: 0 auto;
+    padding: 10px;
+    font-family: 'brandon-bold';
+    width: 80%;
+    height: 500px;
+    bottom: 0;
+    position: relative;
+}
+
+p {
+    color: #FA915A;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.modal-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    height: 90%;
+}
+
+/* modal btn imgs */
+img#add {
+    width: 45px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+img#delete {
+    width: 60px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+/* The Close Button on Modal */
+.closemodal {
+    color: #FA915A;
+    font-size: 55px;
+    font-weight: bold;
+    position:absolute;
+    top: -10px;
+    right: 10px;
+}
+  
+.closemodal:hover,
+.closemodal:focus {
+    color: #a35e39;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.list li:hover .close {
+    display: inline-block;
+    padding-left: 10px;
+  }
+
+/* The Close Button on List Item */
+.close {
+    display: none;
+    cursor: pointer;
+    color: #FA915A;
+    font-size: 20px;
+    position: absolute;
+    padding: 0; 
+    margin: 0;
+  }
+
+.close:hover,
+.close:focus {
+    color: #a35e39;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* container for input + btns */
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* move txt area inside input box */
+input[type=text] {
+    padding-left: 10px;
+}
+
+input {
+    width: 15em;
+}
+
+/* txt inside input */
+input#txt {
+    display:block;
+    border: none;
+    border-radius: 3px;
+    font-family: 'brandon-regular';
+    outline: none;
+}
+
+/* remaining space under input box */
+.bg {
+    background-color: #f1f1f1;
+    width: 100%;
+    bottom: 0;
+    top: 220px;
+    position: absolute;
+}
+
+/* results of adding to list */
+ul.list {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    list-style: none;
+    overflow: auto;
+    padding-top: 30px;
+}
+
+/* slide in animation for list item text */
+@keyframes slidein {
+    0%   { margin-left: 100%; }
+    50% { margin-left: 0%;   }
+  }
+
+/* list container */
+ul {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* list items */
+li {
+    font-family: 'brandon-regular';
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px 0px #cfd9db;
+    -webkit-box-shadow: 0px 2px 5px 0px #cfd9db;
+    -moz-box-shadow: 0px 2px 5px 0px #cfd9db;
+    font-size: 20px;
+    height: 60px;
+    line-height: 61px;
+    margin: 8px 0 0;
+    overflow: hidden;
+    padding: 0 12px 0 14px;
+    position: relative;
+    /* slide in animation */
+    animation-duration: .5s;
+    animation-name: slidein;
+}
+
+/* no focus outline on li item */
+.list li:focus {
+    outline: none;
+}
+
+
+#btns {
+    background-color: #FA915A;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'brandon-bold';
+    outline: none;
+    padding: 5px 10px 5px 10px;
+    margin-left: 10px;
+    text-shadow: 2px 2px #a35e39;
+}
+
+/* cross off completed item on the list */
+.completed {
+    transition: all .4s ease;
+    color: #FA915A;
+    text-decoration: line-through;
+  }
+
+/* font */
+@font-face {
+    font-family: 'brandon-bold';
+    src: url('fonts/brandontext-bold.woff2') format('woff2'),
+         url('fonts/brandontext-bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+@font-face {
+    font-family: 'brandon-regular';
+    src: url('fonts/brandontext-regular.woff2') format('woff2'),
+         url('fonts/brandontext-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: 'brandon-light';
+    src: url('fonts/brandontext-light.woff2') format('woff2'),
+         url('fonts/brandontext-light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+/* title font */
+@font-face {
+    font-family: 'whattheteacherwants';
+    src: url('fonts/whattheteacherwants.woff2') format('woff2'),
+         url('fonts/whattheteacherwants.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
