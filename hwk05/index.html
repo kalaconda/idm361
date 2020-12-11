@@ -38,6 +38,7 @@
     </head>
     
     <!--- read data in local storage -->
+    <!--<body onload="readData();">-->
     <body onload="readData();">
        
         <header>
@@ -85,52 +86,8 @@
         
         <script src="add2home.js"></script>
         <script src="main.js"></script>
-
          <!-- j query for checking off todo -->
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-        <script>
-
-                //checking off a todo
-                $("ul").on("click", "li", function() {
-                    $(this).toggleClass("completed");
-                });
-
-
-                //local storage
-                $(document).ready(function() {
-                    var $button = $('.add-item');
-                    var $input = $('.input');
-                    var $list = $('.list');
-                    // get items from local storage
-                    if (localStorage.getItem('user-input')) {
-                        // select where the storage will be
-                        $list.html(localStorage.getItem('user-input'));
-                    }
-
-
-                    // add item 
-                    $button.on('click', function() {
-
-                        $list.append('<li>' + $input.val() + '<span class ="close"> x</span></li>');
-
-                        // set to html inside the list
-                        localStorage.setItem('user-input', $list.html());
-
-                        $input.val('');
-
-                    });
-
-                    // remove item
-                    $('.list').on('click', '.close', function() {
-                        $(this).parent().remove();
-                        // save changes to local storage
-                        localStorage.setItem('user-input', $list.html());
-                    });
-                    // clear the storage memory completely
-                    localStorage.clear();
-                    });
-        </script>
 
     </body>
 </html>
