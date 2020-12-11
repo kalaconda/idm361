@@ -25,7 +25,6 @@ window.onclick = function(event) {
 }
 
 function readData() {
-  // test
   console.log('reading data');
 
     //checking off a todo
@@ -38,7 +37,6 @@ function readData() {
 
   //checking off todo - local storage
   var activeElement =  $(this).text();
-  console.log(activeElement);
   localStorage.setItem("completed", activeElement);
   });
 
